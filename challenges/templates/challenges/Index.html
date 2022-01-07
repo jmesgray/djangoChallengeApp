@@ -1,0 +1,24 @@
+<!-- This is the html content for the home navigation page -->
+{% extends "challenges/base.html" %}
+{% load static %} <!-- this plugin loads the static files in the template file. base.html file please -->
+
+{%  block css_files %}
+<link rel="stylesheet" href="{% static "challenges/challenges.css" %}"> <!-- this static function allows you to construct a path to the static files -->
+    <link rel="stylesheet" href="{% static "challenges/headers.css" %}">
+    <link rel="stylesheet" href="{% static "challenges/challenge.css" %}">
+
+{% endblock %}
+
+    {% block page_title %}
+        All Challenges
+    {% endblock %}
+
+    {% block content %}
+    {% include "challenges/header.html" %} <!-- this line imports navigation link on top of home page from header.html-->
+
+    <ul>
+        {%  for month in months %} <!-- cannot use month outside of the body now -->
+            <li><a href="{% url "month-challenge" month %}">{{ month|title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

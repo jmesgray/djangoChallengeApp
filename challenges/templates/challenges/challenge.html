@@ -1,0 +1,16 @@
+<!-- This is the html content for each month's page -->
+{% extends "challenges/base.html" %}
+
+
+{% block page_title %} <! this needs to extend to the base.html file. fixed it yayyy -->
+
+   <title> {{ month_name }} Challenge</title> <!-- you can add double curly brackets anywhere -->
+{% endblock %}
+
+
+{% block content %}
+    {% include "challenges/header.html" %} <!-- header.html file goes here -->
+
+    <h1>{{  month_name| title }} Challenge</h1> <!-- This will be a header for your month pages. -->
+    <h2>{{ text }}</h2> <!-- "text" is dynamic data from your views.py file. This will populate -->
+{% endblock %}
