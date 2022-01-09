@@ -1,7 +1,7 @@
 from django.urls import path  # so we can create paths
 from . import views  # importing our views.py file
 
-# then go to this file to complete your view and url
+# then go to this file, to complete your view and url
 urlpatterns = [
     path("", views.index, name="index"),  # will trigger for /challenges/
     path("<int:month>", views.monthly_challenge_by_number),  # integer values by user will trigger this view
