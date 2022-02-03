@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'challenges',
-    # makes our project aware of this app. this is better than adding each individual app to the templates strings below
+    # makes project aware of this app. this is better than adding each individual app to the templates strings below
     'django.contrib.admin',  # these are all modules
     'django.contrib.auth',
     'django.contrib.contenttypes',
